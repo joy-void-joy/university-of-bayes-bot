@@ -1,0 +1,2 @@
+environs==8.0.0
+discord.py==1.4.1
