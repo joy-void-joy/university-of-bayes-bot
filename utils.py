@@ -9,15 +9,6 @@ import sys
 
 class Utils(commands.Cog): 
     @staticmethod
-    async def find_or_create_role(guild, name, **kwargs):
-        try:
-            print([i for i in guild.roles if i.name == name])
-            result = next(i for i in guild.roles if i.name == name)
-        except StopIteration:
-            result = await guild.create_role(name=name, **kwargs)
-        return result
-
-    @staticmethod
     async def send_embed(ctx: commands.Context, message: discord.Message, delete: bool =False, footer: str="", link="", title="", image=""):
         """Util function to send an embed for quoting or other purposes"""
         tosend = discord.Embed(description=message.content, timestamp=message.created_at) 
